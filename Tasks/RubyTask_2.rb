@@ -1,6 +1,8 @@
 #Mini Task #1
 # С клавиатуры вводится дата, единицы измерения и длительность -
-# нужно вывести N последующих дат - использовать Хеш (ключ - ед.измерения, значения - Лямбда )
+# нужно вывести N последующих дат - использовать Хеш (ключ - ед.измерения, значения - Лямбда)
+
+
 
 
 
@@ -20,11 +22,7 @@ class Hash
   def save_invert_2
     inverted_hash = Hash.new(Array.new)
     self.each do |key, value|
-      if inverted_hash.has_key?(value)
-        inverted_hash[value] += [key]
-      else
-        inverted_hash[value] = [key]
-      end
+      inverted_hash[value] += [key]
     end
     inverted_hash
   end
